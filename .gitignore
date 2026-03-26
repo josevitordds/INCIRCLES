@@ -1,0 +1,23 @@
+venv/
+env/
+.env
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Banco de dados local
+*.db
+*.sqlite3
+
+# Pastas pesadas 
+data_pipeline/provas/
+data_pipeline/processadas/
+*.pdf
+*.png
+*.jpg
+backup*.json
+
+# Frontend 
+node_modules/
+.next/
