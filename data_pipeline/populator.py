@@ -12,7 +12,7 @@ from PIL import Image
 load_dotenv()
 
 GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
-BACKEND_URL = "http://localhost:8000/api/admin/questoes/importar"
+BACKEND_URL = "http://localhost:8000/api/questoes/admin/importar"
 
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),

@@ -18,3 +18,6 @@ class LoteImportacao(BaseModel):
     fase: int
     nivel: int
     questoes: List[QuestaoImport]
+
+class RespostaUsuario(BaseModel):
+    alternativa_id: int
