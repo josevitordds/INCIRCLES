@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
+from routers import auth
 from database import create_db_and_tables
 from routers import questoes
 
@@ -24,3 +25,4 @@ def read_root():
     return {"message": "Bem-vindo à API de Questões!"}
 
 app.include_router(questoes.router)
+app.include_router(auth.router)

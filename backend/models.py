@@ -58,3 +58,11 @@ class Alternativa(SQLModel, table=True):
 
     questao_id: Optional[int] = Field(default=None, foreign_key="questao.id")
     questao: Optional[Questao] = Relationship(back_populates="alternativas")
+
+class Usuario(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    nome_completo: str
+    email: str = Field(unique=True, index=True)
+    senha_hash: Optional[str] = None 
+    olimpiada_foco: Optional[str] = None
+    is_google_auth: bool = Field(default=False) 

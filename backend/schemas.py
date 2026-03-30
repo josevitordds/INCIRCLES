@@ -21,3 +21,23 @@ class LoteImportacao(BaseModel):
 
 class RespostaUsuario(BaseModel):
     alternativa_id: int
+
+class UsuarioCreate(BaseModel):
+    nome_completo: str
+    email: str
+    senha: str
+    olimpiada_foco: Optional[str] = None
+
+class UsuarioLogin(BaseModel):
+    email: str
+    senha: str
+
+class UsuarioResponse(BaseModel):
+    id: int
+    nome_completo: str
+    email: str
+    olimpiada_foco: Optional[str] = None
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
